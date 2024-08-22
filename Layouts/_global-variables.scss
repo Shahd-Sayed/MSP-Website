@@ -112,44 +112,61 @@ img {
         width: 100% !important;
         height: 40vh;
 
-        button {
-            position: absolute;
-            top: 3px;
-            right: 10px;
-            cursor: pointer !important;
-            font-size: 34px;
-            font-weight: bold;
-            color: var(--purple-accent) !important;
-            background-color: transparent !important;
-            border: none !important;
-        }
+        .all {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
 
-        button:hover,
-        button:focus {
-            text-decoration: none !important;
-            cursor: pointer;
-        }
+            button {
+                position: absolute;
+                top: 3px;
+                right: 10px;
+                cursor: pointer !important;
+                font-size: 34px;
+                font-weight: bold;
+                color: var(--purple-accent) !important;
+                background-color: transparent !important;
+                border: none !important;
+            }
 
-        p {
-            margin: 20px 0 -16px !important;
-            font-size: 16px;
-            color: var(--secondary-text-color) !important;
+            button:hover,
+            button:focus {
+                text-decoration: none !important;
+                cursor: pointer;
+            }
 
-        }
+            h6 {
+                font-size: 16px;
+                color: #333 !important;
+                margin: 0px !important;
+                margin-top: -43px !important;
 
-        .fa-check {
-            font-weight: 900;
-            font-size: 4rem;
-            margin-top: -10px;
-            width: fit-content;
-            text-align: center;
-            justify-content: center;
-            position: relative;
-            left: 50%;
-            top: 0;
-            transform: translate(-50%, -50%);
-            padding: 7px;
-            color: #7b1d80;
+            }
+
+            p {
+                padding: 0px !important;
+                font-size: 12px !important;
+
+                span {
+                    color: var(--purple-accent) !important;
+                    font-weight: 900;
+                }
+            }
+
+            .fa-check {
+                font-weight: 900;
+                font-size: 3.5rem;
+                margin-top: 30px;
+                width: fit-content;
+                text-align: center;
+                justify-content: center;
+                position: relative;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, -50%);
+                padding: 7px;
+                color: #7b1d80;
+            }
         }
     }
 }
@@ -172,47 +189,56 @@ img {
         z-index: 1000;
         text-align: center;
         width: 33% !important;
-        height: 40vh;
+        height: 38vh;
 
-        button {
-            position: absolute;
-            top: 3px;
-            right: 10px;
-            cursor: pointer;
-            font-size: 34px;
-            font-weight: bold;
-            color: var(--purple-accent) !important;
-            background-color: transparent !important;
-            border: none !important;
-        }
+        .all {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
 
-        button:hover,
-        button:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
+            button {
+                position: absolute;
+                top: 3px;
+                right: 10px;
+                cursor: pointer;
+                font-size: 34px;
+                font-weight: bold;
+                color: var(--purple-accent) !important;
+                background-color: transparent !important;
+                border: none !important;
+            }
 
-        p {
-            margin: 20px 0 -16px !important;
-            font-size: 16px;
-            color: var(--secondary-text-color) !important;
-            margin-left: -77px !important;
-        }
+            h6 {
+                margin: 0px !important;
+                font-size: 14px !important;
+                margin-top: -40px !important;
+                color: #333 !important;
+            }
 
-        .fa-check {
-            font-weight: 900;
-            font-size: 4rem;
-            margin-top: -10px;
-            width: fit-content;
-            text-align: center;
-            justify-content: center;
-            position: relative;
-            left: 50%;
-            top: 0;
-            transform: translate(-50%, -50%);
-            padding: 7px;
-            color: #7b1d80;
+            p {
+                padding: 0px !important;
+                font-size: 12px !important;
+
+                span {
+                    color: var(--purple-accent) !important;
+                    font-weight: 900;
+                }
+            }
+
+            .fa-check {
+                font-weight: 900;
+                font-size: 3.5rem;
+                margin-top: 37px;
+                width: fit-content;
+                text-align: center;
+                justify-content: center;
+                position: relative;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, -50%);
+                padding: 7px;
+                color: #7b1d80;
+            }
         }
     }
 }
@@ -222,23 +248,27 @@ img {
         .custom-alert {
             left: 50%;
             width: 78% !important;
-            height: 33vh !important;
+            height: 50vh !important;
 
-            button {
-                font-size: 28px;
-            }
+            .all {
+                gap: 12px;
 
-            p {
-                margin: 18% auto 0px -44px !important;
-                font-size: 14px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                button {
+                    font-size: 28px;
+                }
 
-            }
+                h6 {
+                    font-size: 12px !important;
+                }
 
-            .fa-check {
-                font-size: 2.5rem;
+                p {
+                    margin: 0px !important;
+                    font-size: 10px !important;
+                }
+
+                .fa-check {
+                    font-size: 2.5rem;
+                }
             }
         }
     }
@@ -248,20 +278,28 @@ img {
             top: 56%;
             left: 48%;
             width: 83% !important;
-            height: 32vh;
+            height: 50vh !important;
 
-            button {
-                top: -6px;
-            }
+            .all {
 
-            p {
-                font-size: 12px !important;
-                margin-left: -50px !important;
-            }
+                button {
+                    top: -6px;
+                }
 
-            .fa-check {
-                font-size: 2.5rem;
-                margin-top: 0px;
+                h6 {
+                    font-size: 12px !important;
+                    margin-left:0px important;
+                }
+                p{
+                    font-size: 10px !important;
+                }
+
+                .fa-check {
+                    font-size: 2.5rem;
+                    margin-top: 60px;
+                    margin-bottom: 10px;
+
+                }
             }
         }
     }

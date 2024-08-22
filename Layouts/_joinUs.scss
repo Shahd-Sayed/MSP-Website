@@ -131,6 +131,10 @@
         font-weight: bold;
         color: var(--purple-accent) !important;
     }
+    p{
+        color: var(--secondary-text-color) !important;
+        font-size: 14px !important;
+    }
 }
 
 #alert-message {
@@ -138,6 +142,7 @@
     font-size: 16px;
     color: #333;
 }
+
 .no-scroll {
     overflow: hidden;
   }
@@ -148,5 +153,8 @@
             padding: 20px 0px 0px 10px !important;
             font-size: 0.8rem !important;
         }
+    }
+    .alert-content{
+        margin: 0px 20px !important;
     }
 }

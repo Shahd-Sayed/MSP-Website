@@ -99,7 +99,12 @@ img {
   width: 100% !important;
   height: 40vh;
 }
-#alertsss .custom-alert button {
+#alertsss .custom-alert .all {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#alertsss .custom-alert .all button {
   position: absolute;
   top: 3px;
   right: 10px;
@@ -110,20 +115,29 @@ img {
   background-color: transparent !important;
   border: none !important;
 }
-#alertsss .custom-alert button:hover,
-#alertsss .custom-alert button:focus {
+#alertsss .custom-alert .all button:hover,
+#alertsss .custom-alert .all button:focus {
   text-decoration: none !important;
   cursor: pointer;
 }
-#alertsss .custom-alert p {
-  margin: 20px 0 -16px !important;
+#alertsss .custom-alert .all h6 {
   font-size: 16px;
-  color: var(--secondary-text-color) !important;
+  color: #333 !important;
+  margin: 0px !important;
+  margin-top: -43px !important;
 }
-#alertsss .custom-alert .fa-check {
+#alertsss .custom-alert .all p {
+  padding: 0px !important;
+  font-size: 12px !important;
+}
+#alertsss .custom-alert .all p span {
+  color: var(--purple-accent) !important;
   font-weight: 900;
-  font-size: 4rem;
-  margin-top: -10px;
+}
+#alertsss .custom-alert .all .fa-check {
+  font-weight: 900;
+  font-size: 3.5rem;
+  margin-top: 30px;
   width: fit-content;
   text-align: center;
   justify-content: center;
@@ -151,9 +165,14 @@ img {
   z-index: 1000;
   text-align: center;
   width: 33% !important;
-  height: 40vh;
+  height: 38vh;
 }
-#alerts .custom-alert button {
+#alerts .custom-alert .all {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#alerts .custom-alert .all button {
   position: absolute;
   top: 3px;
   right: 10px;
@@ -164,22 +183,24 @@ img {
   background-color: transparent !important;
   border: none !important;
 }
-#alerts .custom-alert button:hover,
-#alerts .custom-alert button:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+#alerts .custom-alert .all h6 {
+  margin: 0px !important;
+  font-size: 14px !important;
+  margin-top: -40px !important;
+  color: #333 !important;
 }
-#alerts .custom-alert p {
-  margin: 20px 0 -16px !important;
-  font-size: 16px;
-  color: var(--secondary-text-color) !important;
-  margin-left: -77px !important;
+#alerts .custom-alert .all p {
+  padding: 0px !important;
+  font-size: 12px !important;
 }
-#alerts .custom-alert .fa-check {
+#alerts .custom-alert .all p span {
+  color: var(--purple-accent) !important;
   font-weight: 900;
-  font-size: 4rem;
-  margin-top: -10px;
+}
+#alerts .custom-alert .all .fa-check {
+  font-weight: 900;
+  font-size: 3.5rem;
+  margin-top: 37px;
   width: fit-content;
   text-align: center;
   justify-content: center;
@@ -195,37 +216,44 @@ img {
   #alertsss .custom-alert {
     left: 50%;
     width: 78% !important;
-    height: 33vh !important;
+    height: 50vh !important;
   }
-  #alertsss .custom-alert button {
+  #alertsss .custom-alert .all {
+    gap: 12px;
+  }
+  #alertsss .custom-alert .all button {
     font-size: 28px;
   }
-  #alertsss .custom-alert p {
-    margin: 18% auto 0px -44px !important;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  #alertsss .custom-alert .all h6 {
+    font-size: 12px !important;
   }
-  #alertsss .custom-alert .fa-check {
+  #alertsss .custom-alert .all p {
+    margin: 0px !important;
+    font-size: 10px !important;
+  }
+  #alertsss .custom-alert .all .fa-check {
     font-size: 2.5rem;
   }
   #alerts .custom-alert {
     top: 56%;
     left: 48%;
     width: 83% !important;
-    height: 32vh;
+    height: 50vh !important;
   }
-  #alerts .custom-alert button {
+  #alerts .custom-alert .all button {
     top: -6px;
   }
-  #alerts .custom-alert p {
+  #alerts .custom-alert .all h6 {
     font-size: 12px !important;
-    margin-left: -50px !important;
+    margin-left: 0px important;
   }
-  #alerts .custom-alert .fa-check {
+  #alerts .custom-alert .all p {
+    font-size: 10px !important;
+  }
+  #alerts .custom-alert .all .fa-check {
     font-size: 2.5rem;
-    margin-top: 0px;
+    margin-top: 60px;
+    margin-bottom: 10px;
   }
 }
 #splash {
@@ -4984,7 +5012,7 @@ div#cta\ previous {
   }
   #contact .mid p {
     font-size: 10px;
-    margin: 5px 0px 38px;
+    margin: 5px 5px 38px 5px;
   }
 }
 @keyframes show-icon-1 {
@@ -5190,6 +5218,10 @@ body.no-scroll {
   font-weight: bold;
   color: var(--purple-accent) !important;
 }
+.alert-content p {
+  color: var(--secondary-text-color) !important;
+  font-size: 14px !important;
+}
 
 #alert-message {
   margin: 20px 0;
@@ -5205,6 +5237,9 @@ body.no-scroll {
   .joinUs h2 {
     padding: 20px 0px 0px 10px !important;
     font-size: 0.8rem !important;
+  }
+  .alert-content {
+    margin: 0px 20px !important;
   }
 }
 #ourCommittes div header div {
@@ -5348,10 +5383,11 @@ body.no-scroll {
 }
 #ourCommittes div section#developers div div.details .track fieldset p {
   color: var(--secondary-text-color) !important;
-  font-size: 0.554rem !important;
+  font-size: 0.76rem !important;
   width: 80% !important;
   margin: 2vh auto !important;
   font-weight: 400 !important;
+  height: 14vh;
 }
 #ourCommittes div section#developers div div.details .track fieldset h4 {
   margin: 0 !important;
@@ -5430,7 +5466,9 @@ body.no-scroll {
     transform: translateX(-200%);
   }
   #ourCommittes .container section#developers div div.details .track fieldset p {
-    font-size: 0.375rem !important;
+    font-size: 0.8rem !important;
+    height: 25vh;
+    overflow: scroll;
   }
   #ourCommittes .container section#developers div div.details .track fieldset .big-title {
     font-size: 0.563em !important;

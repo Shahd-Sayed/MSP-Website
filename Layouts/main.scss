@@ -193,11 +193,11 @@
 
                             p {
                                 color: var(--secondary-text-color) !important;
-                                // font-size: 0.63rem !important;
-                                font-size: 0.554rem !important;
+                                font-size: 0.76rem !important;
                                 width: 80% !important;
                                 margin: 2vh auto !important;
                                 font-weight: 400 !important;
+                                height: 14vh;
 
                             }
 
@@ -317,7 +317,9 @@
 
                             fieldset {
                                 p {
-                                    font-size: 0.375rem !important;
+                                    font-size: 0.8rem !important;
+                                    height: 25vh;
+                                    overflow: scroll;
                                 }
 
                                 .big-title {

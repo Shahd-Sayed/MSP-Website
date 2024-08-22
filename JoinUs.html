@@ -194,11 +194,12 @@
     </div>
     <div id="custom-alert" class="custom-alert hidden">
         <div class="alert-content">
-          <span class="close-btn">&times;</span>
-          <i class="fa-solid fa-check"></i>
-          <p id="alert-message">Thank you! Your form is submitted successfully.</p>
+            <span class="close-btn">&times;</span>
+            <i class="fa-solid fa-check"></i>
+            <h6 id="alert-message"></h6>
+            <p> Your registration has been uploaded successfully and we will contact you shortly</p>
         </div>
-      </div>
+    </div>
     <script src="https://kit.fontawesome.com/306f44334f.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
     <script>
@@ -207,38 +208,41 @@
         const modal = document.getElementById('custom-alert');
         const closeBtn = document.querySelector('.close-btn');
         const alertMessage = document.getElementById('alert-message');
-        
+
         FormDataHome.addEventListener('submit', e => {
             e.preventDefault();
             fetch(scriptURLS, { method: 'POST', body: new FormData(FormDataHome) })
                 .then(response => {
-                    alertMessage.textContent = "Thank you! Your form is submitted successfully.";
+                    alertMessage.textContent = "You have registered successfully";
                     modal.classList.remove('hidden');
-                    document.body.classList.add('no-scroll'); 
+                    document.body.classList.add('no-scroll');
+
                 })
                 .catch(error => {
                     alertMessage.textContent = `Error: ${error.message}`;
                     modal.classList.remove('hidden');
-                    document.body.classList.add('no-scroll'); 
+                    document.body.classList.add('no-scroll');
                 });
         });
-        
+
         function closeModal() {
             modal.classList.add('hidden');
-            document.body.classList.remove('no-scroll'); // تمكين التمرير
-            FormDataHome.reset(); // مسح بيانات النموذج
-          }
-          
-          closeBtn.addEventListener('click', closeModal);
-          
-          // إغلاق الرسالة المنبثقة عند النقر على خارجها
-          window.addEventListener('click', (event) => {
+            document.body.classList.remove('no-scroll');
+            FormDataHome.reset();
+
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', (event) => {
             if (event.target === modal) {
-              closeModal();
+                closeModal();
+                document.body.style.overflow = 'hidden';
+
             }
-          });
-        
-        
+        });
+
+
     </script>
 </body>
 

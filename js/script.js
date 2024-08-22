@@ -269,7 +269,7 @@ const formHome = document.forms[0];
 formHome.addEventListener('submit', e => {
     e.preventDefault();
     fetch(scriptURLs, { method: 'POST', body: new FormData(formHome) })
-        .then(response => showCustomAlertHome("Thank you! Your form is submitted successfully."))
+        .then(response => showCustomAlertHome("You have successfully sent your question"))
         .catch(error => console.error('Error!', error.message));
     console.log("Submit")
     formHome.reset();
@@ -296,7 +296,7 @@ const form = document.forms[1];
 form.addEventListener('submit', e => {
     e.preventDefault();
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => showCustomAlert("Thank you! Your form is submitted successfully."))
+        .then(response => showCustomAlert("You have successfully sent your question"))
         .catch(error => console.error('Error!', error.message));
     console.log("Submit")
     form.reset();

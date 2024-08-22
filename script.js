@@ -6,7 +6,7 @@ function AnimationJoinUs() {
   setTimeout(() => {
     document.querySelector(".des-info-bestStudent").style.cssText +=
       "animation: showTitleMsp 1s forwards;";
-  }, 2100);
+  }, 1100);
   setTimeout(() => {
     document.querySelector("#timeline").style.cssText +=
       "animation: show-line-contact 3s forwards;";
@@ -19,10 +19,10 @@ function AnimationJoinUs() {
         index
       ].style.cssText += `animation:show-icon-${index + 1} 3s forwards;`;
     }
-  }, 3100);
+  }, 2100);
   setTimeout(() => {
     document.querySelector("form").style.cssText +=
       "animation: showTitleMsp 2s forwards;";
-  }, 6100);
+  }, 4100);
 }
 AnimationJoinUs();
