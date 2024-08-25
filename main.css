@@ -5387,7 +5387,8 @@ body.no-scroll {
   width: 80% !important;
   margin: 2vh auto !important;
   font-weight: 400 !important;
-  height: 14vh;
+  overflow: scroll;
+  height: 10vh;
 }
 #ourCommittes div section#developers div div.details .track fieldset h4 {
   margin: 0 !important;
@@ -5467,7 +5468,7 @@ body.no-scroll {
   }
   #ourCommittes .container section#developers div div.details .track fieldset p {
     font-size: 0.8rem !important;
-    height: 25vh;
+    height: 12vh;
     overflow: scroll;
   }
   #ourCommittes .container section#developers div div.details .track fieldset .big-title {
