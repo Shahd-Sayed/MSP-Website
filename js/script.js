@@ -307,7 +307,7 @@ function showCustomAlert(message) {
     alertMessage.textContent = message;
     alertBox.classList.remove('hidden');
 
-      document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
 
     document.getElementById('close-alert-contact').addEventListener('click', () => {
         alertBox.classList.add('hidden');
@@ -319,101 +319,105 @@ function showCustomAlert(message) {
 // Button Search Mobile & tablet
 const suggestionsMobileData = [
     "Committees", "UX-UI", "Flutter", "python", "Graphic Design", "Back-End",
-    "Front-End", "PR", "HR", "Marketing", "Developers", "Techoons", 
+    "Front-End", "PR", "HR", "Marketing", "Developers", "Techoons",
     "Logistics", "Media", "Team", "Sponsors", "Features"
-  ];
-  
-  function showSuggestions(query, suggestionsContainer, inputField) {
-    suggestionsContainer.innerHTML = ''; 
-  
+];
+
+function showSuggestions(query, suggestionsContainer, inputField) {
+    suggestionsContainer.innerHTML = '';
+
     if (query.length > 0) {
-      const filteredSuggestions = suggestionsMobileData.filter(item =>
-        item.toLowerCase().includes(query)
-      );
-  
-      filteredSuggestions.forEach(suggestion => {
-        const div = document.createElement('div');
-        div.textContent = suggestion;
-        div.classList.add('suggestion-item');
-        div.addEventListener('click', () => {
-          inputField.value = suggestion;
-          suggestionsContainer.innerHTML = '';
-          suggestionsContainer.style.display = 'none'; 
-          performSearch(inputField);
+        const filteredSuggestions = suggestionsMobileData.filter(item =>
+            item.toLowerCase().includes(query)
+        );
+
+        filteredSuggestions.forEach(suggestion => {
+            const div = document.createElement('div');
+            div.textContent = suggestion;
+            div.classList.add('suggestion-item');
+            div.addEventListener('click', () => {
+                inputField.value = suggestion;
+                suggestionsContainer.innerHTML = '';
+                suggestionsContainer.style.display = 'none';
+                performSearch(inputField);
+            });
+            suggestionsContainer.appendChild(div);
         });
-        suggestionsContainer.appendChild(div);
-      });
-      suggestionsContainer.style.display = 'block';
+        suggestionsContainer.style.display = 'block';
     } else {
-      suggestionsContainer.style.display = 'none';
+        suggestionsContainer.style.display = 'none';
     }
-  }
-  function performSearch(inputField) {
+}
+function performSearch(inputField) {
     const searchTerm = inputField.value.toLowerCase();
     highlightItems(searchTerm);
-  }
-  function highlightItems(term) {
+}
+function highlightItems(term) {
     const selectors = ['.sections', '.headings', '.allCommittees', '.non_tect'];
     selectors.forEach(selector => {
-      document.querySelectorAll(selector).forEach(item => {
-        const text = item.querySelector('.text, #bestStudent, .infoTitle, .non-tech-title')?.innerText.toLowerCase() || '';
-        if (text.includes(term)) {
-          item.classList.add('highlight');
-          item.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        } else {
-          item.classList.remove('highlight');
-        }
-      });
+        document.querySelectorAll(selector).forEach(item => {
+            const text = item.querySelector('.text, #bestStudent, .infoTitle, .non-tech-title')?.innerText.toLowerCase() || '';
+            if (text.includes(term)) {
+                item.classList.add('highlight');
+                item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                item.classList.remove('highlight');
+            }
+        });
     });
-  }
-  const searchInputMobile = document.getElementById('searchBtns');
-  const suggestionsMobileContainer = document.getElementById('suggestionss');
-  
-  searchInputMobile.addEventListener('input', function() {
+}
+const searchInputMobile = document.getElementById('searchBtns');
+const suggestionsMobileContainer = document.getElementById('suggestionss');
+
+searchInputMobile.addEventListener('input', function () {
     const query = this.value.toLowerCase();
     showSuggestions(query, suggestionsMobileContainer, searchInputMobile);
-  });
-  
-  document.getElementById('searchButtons').addEventListener('click', () => performSearch(searchInputMobile));
-  
-  searchInputMobile.addEventListener('keydown', function(event) {
+});
+
+document.getElementById('searchButtons').addEventListener('click', () => performSearch(searchInputMobile));
+
+searchInputMobile.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-      event.preventDefault();
-      performSearch(searchInputMobile);
+        event.preventDefault();
+        performSearch(searchInputMobile);
     }
-  });
-    const searchInputDesktop = document.getElementById('searchBtn');
-  const suggestionsDesktopContainer = document.getElementById('suggestions');
-  
-  searchInputDesktop.addEventListener('input', function() {
+});
+const searchInputDesktop = document.getElementById('searchBtn');
+const suggestionsDesktopContainer = document.getElementById('suggestions');
+
+searchInputDesktop.addEventListener('input', function () {
     const query = this.value.toLowerCase();
     showSuggestions(query, suggestionsDesktopContainer, searchInputDesktop);
-  });
-  
-  document.getElementById('searchButton').addEventListener('click', () => performSearch(searchInputDesktop));
-  
-  searchInputDesktop.addEventListener('keydown', function(event) {
+});
+
+document.getElementById('searchButton').addEventListener('click', () => performSearch(searchInputDesktop));
+
+searchInputDesktop.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-      event.preventDefault();
-      performSearch(searchInputDesktop);
+        event.preventDefault();
+        performSearch(searchInputDesktop);
     }
-  });
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+});
+
+document.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
