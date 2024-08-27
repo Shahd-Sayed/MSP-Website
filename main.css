@@ -1391,6 +1391,7 @@ button:focus {
 }
 #home .section_two .SponserGrid .sectionOne img {
   height: 25vh;
+  padding: 16px !important;
 }
 #home .section_two .questionsGrid {
   display: grid;
