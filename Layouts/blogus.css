@@ -106,16 +106,20 @@ a:hover {
 
 .box {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 53px;
+  height: 43px;
   background-color: #fff;
   top: 30px;
   left: 30px;
-  border-radius: 13px;
+  border-radius: 8px;
   text-align: center;
   padding: 4px;
+  font-size: 0.55rem;
+  text-align: center;
 }
-
+#group2 .card-text{
+  min-height: 168px !important ;
+}
 
 
 /* Media Queries */

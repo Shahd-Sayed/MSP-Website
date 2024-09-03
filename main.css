@@ -1328,8 +1328,11 @@ button:focus {
   border: none !important;
 }
 #home .section_two .GridTeam .sectionOne img {
-  width: 65%;
+  width: 75%;
   transform: translate(0px, 0px);
+  height: 36vh;
+  border: 3px solid var(--main-background-color);
+  border-radius: 100%;
 }
 #home .section_two .GridTeam .sectionOne .position {
   display: flex;
@@ -4151,7 +4154,7 @@ div#cta\ previous {
 #ourTeam .cards .card1 .icons a {
   text-decoration: none;
 }
-#ourTeam .cards .card1 .icons a i {
+#ourTeam .cards .card1 .icons a i, #ourTeam .cards .card1 .icons a svg {
   width: 35px;
   height: 35px;
   border-radius: 50px;
@@ -4162,10 +4165,15 @@ div#cta\ previous {
   transition: 0.5s;
   font-size: 1.2rem;
 }
-#ourTeam .cards .card1 .icons a i:hover {
+#ourTeam .cards .card1 .icons a i:hover, #ourTeam .cards .card1 .icons a svg:hover {
   transform: scale(1.1);
 }
-#ourTeam .cards .card1:hover .icons i {
+#ourTeam .cards .card1 .icons a svg {
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+}
+#ourTeam .cards .card1:hover .icons i, #ourTeam .cards .card1:hover .icons svg {
   color: white;
   background-color: white;
   box-shadow: 0px 0px 5px 0px white;
