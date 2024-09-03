@@ -399,9 +399,9 @@ searchInputDesktop.addEventListener('keydown', function (event) {
     }
 });
 
-// document.addEventListener("contextmenu", function (event) {
-//     event.preventDefault();
-// });
+document.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+});
 
 
 
