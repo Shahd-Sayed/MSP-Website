@@ -2291,6 +2291,14 @@ button:focus {
   #ourGallery #imagesGallery article .conatinerImages .imagesContainer .containerEvents .image,
   #ourGallery #imagesGallery article .conatinerImages .imagesContainer .containerSessions .image {
     height: 323.84px;
+    display: flex;
+    align-items: center;
+  }
+  #ourGallery #imagesGallery article .conatinerImages .imagesContainer .containerAll .image img,
+  #ourGallery #imagesGallery article .conatinerImages .imagesContainer .containerEvents .image img,
+  #ourGallery #imagesGallery article .conatinerImages .imagesContainer .containerSessions .image img {
+    width: auto;
+    height: 100%;
   }
 }
 .center-con {

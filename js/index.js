@@ -66,7 +66,6 @@ function getSessions() {
       imagesContainer.children[2].style.cssText = `transform: skew(0deg, 0deg);filter: grayscale(0);opacity: 100%; display:block;`;
     }, 200);
   }, 700);
-
 }
 // nav bar SPA
 
@@ -79,7 +78,9 @@ function getAllGallery(pageNum) {
     redirect: "follow",
   };
   fetch(
-    `https://api.msp-alazhar.tech/galleryClient/get?page=${pageNum || 1}&limit=10`,
+    `https://api.msp-alazhar.tech/galleryClient/get?page=${
+      pageNum || 1
+    }&limit=10`,
     requestOptions
   )
     .then((res) => res.json())
@@ -90,16 +91,22 @@ function getAllGallery(pageNum) {
       document.querySelector("#imageGridAll").innerHTML = ``;
       for (let i = 0; i < data["results"].length; i++) {
         document.querySelector("#imageGridAll").innerHTML += `
-          <div class="item${i + 1
-          } image skeleton" style="background-image: url('${data["results"][i]["image"]
-          }');">
+          <div class="item${
+            i + 1
+          } image skeleton" style="background-image: url('${
+          data["results"][i]["image"]
+        }');">
         
-        <span class="zoom-icon" title="zoom image"><a href="${data["results"][i]["image"]
-          }" data-lightbox="galleryimages" data-title="${data["results"][i]["name"]
-          }-image #${i + 1
-          }" style="display:flex; color:white; flex-direction:column; gap:0.5rem;align-items:center;"><img src="../assests/zoom-in.webp" alt=""><span>ZOOM</span></a></span>
-        <img src="${data["results"][i]["image"]
-          }" alt="" style="opacity:0;" ></div>
+        <span class="zoom-icon" title="zoom image"><a href="${
+          data["results"][i]["image"]
+        }" data-lightbox="galleryimages" data-title="${
+          data["results"][i]["name"]
+        }-image #${
+          i + 1
+        }" style="display:flex; color:white; flex-direction:column; gap:0.5rem;align-items:center;"><img src="../assests/zoom-in.webp" alt=""><span>ZOOM</span></a></span>
+        <img src="${
+          data["results"][i]["image"]
+        }" alt="" style="opacity:0;" ></div>
           `;
       }
       document.querySelectorAll(".image").forEach((e) => {
@@ -134,7 +141,8 @@ function getEventsGallery(pageNum) {
     redirect: "follow",
   };
   fetch(
-    `https://api.msp-alazhar.tech/galleryClient/getEvents?page=${pageNum || 1
+    `https://api.msp-alazhar.tech/galleryClient/getEvents?page=${
+      pageNum || 1
     }&limit=10`,
     requestOptions
   )
@@ -148,16 +156,22 @@ function getEventsGallery(pageNum) {
       document.querySelector("#imageGridEvents").innerHTML = ``;
       for (let i = 0; i < data["results"].length; i++) {
         document.querySelector("#imageGridEvents").innerHTML += `
-          <div class="item${i + 1
-          } image skeleton" style="background-image: url('${data["results"][i]["image"]
-          }');">
+          <div class="item${
+            i + 1
+          } image skeleton" style="background-image: url('${
+          data["results"][i]["image"]
+        }');">
         
-        <span class="zoom-icon" title="zoom image"><a href="${data["results"][i]["image"]
-          }" data-lightbox="galleryimages" data-title="${data["results"][i]["name"]
-          }-image #${i + 1
-          }" style="display:flex; color:white; flex-direction:column; gap:0.5rem;align-items:center;"><img src="../assests/zoom-in.webp" alt=""><span>ZOOM</span></a></span>
-        <img src="${data["results"][i]["image"]
-          }" alt="" style="opacity:0;" ></div>
+        <span class="zoom-icon" title="zoom image"><a href="${
+          data["results"][i]["image"]
+        }" data-lightbox="galleryimages" data-title="${
+          data["results"][i]["name"]
+        }-image #${
+          i + 1
+        }" style="display:flex; color:white; flex-direction:column; gap:0.5rem;align-items:center;"><img src="../assests/zoom-in.webp" alt=""><span>ZOOM</span></a></span>
+        <img src="${
+          data["results"][i]["image"]
+        }" alt="" style="opacity:0;" ></div>
           `;
       }
       document.querySelectorAll(".image").forEach((e) => {
@@ -192,7 +206,8 @@ function getSessionsGallery(pageNum) {
     redirect: "follow",
   };
   fetch(
-    `https://api.msp-alazhar.tech/galleryClient/getSessions?page=${pageNum || 1
+    `https://api.msp-alazhar.tech/galleryClient/getSessions?page=${
+      pageNum || 1
     }&limit=10`,
     requestOptions
   )
@@ -201,16 +216,22 @@ function getSessionsGallery(pageNum) {
       document.querySelector("#imageGridSessions").innerHTML = ``;
       for (let i = 0; i < data["results"].length; i++) {
         document.querySelector("#imageGridSessions").innerHTML += `
-          <div class="item${i + 1
-          } image skeleton" style="background-image: url('${data["results"][i]["image"]
-          }');">
+          <div class="item${
+            i + 1
+          } image skeleton" style="background-image: url('${
+          data["results"][i]["image"]
+        }');">
         
-        <span class="zoom-icon" title="zoom image"><a href="${data["results"][i]["image"]
-          }" data-lightbox="galleryimages" data-title="${data["results"][i]["name"]
-          }-image #${i + 1
-          }" style="display:flex; color:white; flex-direction:column; gap:0.5rem;align-items:center;"><img src="../assests/zoom-in.webp" alt=""><span>ZOOM</span></a></span>
-        <img src="${data["results"][i]["image"]
-          }" alt="" style="opacity:0;" ></div>
+        <span class="zoom-icon" title="zoom image"><a href="${
+          data["results"][i]["image"]
+        }" data-lightbox="galleryimages" data-title="${
+          data["results"][i]["name"]
+        }-image #${
+          i + 1
+        }" style="display:flex; color:white; flex-direction:column; gap:0.5rem;align-items:center;"><img src="../assests/zoom-in.webp" alt=""><span>ZOOM</span></a></span>
+        <img src="${
+          data["results"][i]["image"]
+        }" alt="" style="opacity:0;" ></div>
           `;
       }
       document.querySelectorAll(".image").forEach((e) => {
@@ -274,11 +295,11 @@ navItems.forEach((item) => {
         }, 100);
         setTimeout(function adding() {
           document.querySelectorAll(".ourCommitteesDescription")[0] === null ||
-            document.querySelectorAll(".ourCommitteesDescription")[0] === void 0
+          document.querySelectorAll(".ourCommitteesDescription")[0] === void 0
             ? void 0
             : document
-              .querySelectorAll(".ourCommitteesDescription")[0]
-              .classList.add("show1");
+                .querySelectorAll(".ourCommitteesDescription")[0]
+                .classList.add("show1");
         }, 2000);
       }, 900);
     } else if (item == navItems[1]) {
@@ -345,11 +366,11 @@ navItems.forEach((item) => {
       });
       setTimeout(function adding() {
         document.querySelectorAll(".ourCommitteesDescription")[1] === null ||
-          document.querySelectorAll(".ourCommitteesDescription")[1] === void 0
+        document.querySelectorAll(".ourCommitteesDescription")[1] === void 0
           ? void 0
           : document
-            .querySelectorAll(".ourCommitteesDescription")[1]
-            .classList.add("show1");
+              .querySelectorAll(".ourCommitteesDescription")[1]
+              .classList.add("show1");
       }, 1000);
     } else if (item == navItems[4]) {
       mains.forEach((m) => {
@@ -1927,8 +1948,9 @@ function AnimationBlog() {
 function ScrollingAnimationBlog() {
   const myBlogCards = document.querySelectorAll(".card-blog");
   let totalHeight = (window.innerHeight / 5) * 4;
-  const btnsLeftRight = document.querySelectorAll(".content3")[1];
-  const btnsLeftRightTop = btnsLeftRight.getBoundingClientRect().top;
+  //These Buttons are commented because api isn't working now on day-3-09-2024
+  // const btnsLeftRight = document.querySelectorAll(".content3")[1];
+  // const btnsLeftRightTop = btnsLeftRight.getBoundingClientRect().top;
   if (
     document.querySelectorAll(".des-info-bestStudent")[2].style.animation ==
     "1s ease 0s 1 normal forwards running showTitleMsp"
@@ -1942,11 +1964,12 @@ function ScrollingAnimationBlog() {
         e.style.cssText += "animation:auto;";
       }
     });
-    if (btnsLeftRightTop < totalHeight) {
-      btnsLeftRight.style.cssText += "animation: showTitleMsp 1s forwards;";
-    } else {
-      btnsLeftRight.style.cssText += "animation:auto;";
-    }
+    //These Buttons are commented because api isn't working now on day-3-09-2024
+    // if (btnsLeftRightTop < totalHeight) {
+    //   btnsLeftRight.style.cssText += "animation: showTitleMsp 1s forwards;";
+    // } else {
+    //   btnsLeftRight.style.cssText += "animation:auto;";
+    // }
   } else {
     setTimeout(() => {
       myBlogCards.forEach((e) => {
@@ -1958,11 +1981,12 @@ function ScrollingAnimationBlog() {
           e.style.cssText += "animation:auto;";
         }
       });
-      if (btnsLeftRightTop < totalHeight) {
-        btnsLeftRight.style.cssText += "animation: showTitleMsp 1s forwards;";
-      } else {
-        btnsLeftRight.style.cssText += "animation:auto;";
-      }
+      //These Buttons are commented because api isn't working now on day-3-09-2024
+      // if (btnsLeftRightTop < totalHeight) {
+      //   btnsLeftRight.style.cssText += "animation: showTitleMsp 1s forwards;";
+      // } else {
+      //   btnsLeftRight.style.cssText += "animation:auto;";
+      // }
     }, 2200);
   }
 }
@@ -2105,11 +2129,11 @@ function checkNetworkSpeed() {
       )[0].style.cssText = `animation: showing-text 2s, cursor 0.4s step-end alternate;`;
       setTimeout(function adding() {
         document.querySelectorAll(".ourCommitteesDescription")[0] === null ||
-          document.querySelectorAll(".ourCommitteesDescription")[0] === void 0
+        document.querySelectorAll(".ourCommitteesDescription")[0] === void 0
           ? void 0
           : document
-            .querySelectorAll(".ourCommitteesDescription")[0]
-            .classList.add("show1");
+              .querySelectorAll(".ourCommitteesDescription")[0]
+              .classList.add("show1");
       }, 2000);
 
       // End animation Header
@@ -2227,13 +2251,11 @@ function scrollToTop() {
 
 window.addEventListener("beforeunload", scrollToTop);
 
-
-
-document.querySelectorAll('.info').forEach(anchor => {
-  anchor.addEventListener('click', function () {
-    const mains = document.querySelectorAll('main');
-    const navItems = document.querySelectorAll('.nav-item');
-    const navLink = document.querySelectorAll('.nav-link');
+document.querySelectorAll(".info").forEach((anchor) => {
+  anchor.addEventListener("click", function () {
+    const mains = document.querySelectorAll("main");
+    const navItems = document.querySelectorAll(".nav-item");
+    const navLink = document.querySelectorAll(".nav-link");
     mains.forEach((m) => {
       m.style.opacity = 0;
       setTimeout(function () {
@@ -2241,16 +2263,16 @@ document.querySelectorAll('.info').forEach(anchor => {
       }, 700);
     });
     navItems.forEach((nav) => {
-      nav.classList.remove('active');
+      nav.classList.remove("active");
     });
     navLink.forEach((nav) => {
-      nav.classList.remove('active');
+      nav.classList.remove("active");
     });
     dropdownItem.forEach((item) => {
       item.classList.remove("active");
-      dropdownItem[0].classList.add('active');
+      dropdownItem[0].classList.add("active");
     });
-    const targetSectionId = this.getAttribute('data-for');
+    const targetSectionId = this.getAttribute("data-for");
     const targetSection = document.getElementById(targetSectionId);
     setTimeout(() => {
       mains[3].style.display = "block";
@@ -2259,18 +2281,20 @@ document.querySelectorAll('.info').forEach(anchor => {
       mains[3].style.opacity = "1";
       AnimationInfo();
     }, 900);
-    const relatedNavItem = document.querySelector(`.nav-link[data-for="${targetSection}"]`);
+    const relatedNavItem = document.querySelector(
+      `.nav-link[data-for="${targetSection}"]`
+    );
     if (relatedNavItem) {
-      relatedNavItem.classList.add('active');
+      relatedNavItem.classList.add("active");
     }
   });
 });
 
-document.querySelectorAll('.team').forEach(button => {
-  button.addEventListener('click', function () {
-    const mains = document.querySelectorAll('main');
-    const navItems = document.querySelectorAll('.nav-item');
-    const navLink = document.querySelectorAll('.nav-link');
+document.querySelectorAll(".team").forEach((button) => {
+  button.addEventListener("click", function () {
+    const mains = document.querySelectorAll("main");
+    const navItems = document.querySelectorAll(".nav-item");
+    const navLink = document.querySelectorAll(".nav-link");
     mains.forEach((m) => {
       m.style.opacity = 0;
       setTimeout(function () {
@@ -2278,16 +2302,16 @@ document.querySelectorAll('.team').forEach(button => {
       }, 700);
     });
     navItems.forEach((nav) => {
-      nav.classList.remove('active');
+      nav.classList.remove("active");
     });
     navLink.forEach((nav) => {
-      nav.classList.remove('active');
+      nav.classList.remove("active");
     });
     dropdownItem.forEach((item) => {
       item.classList.remove("active");
-      dropdownItem[1].classList.add('active');
+      dropdownItem[1].classList.add("active");
     });
-    const targetSectionId = this.getAttribute('data-for');
+    const targetSectionId = this.getAttribute("data-for");
     const targetSection = document.getElementById(targetSectionId);
     setTimeout(() => {
       mains[4].style.display = "block";
@@ -2298,18 +2322,20 @@ document.querySelectorAll('.team').forEach(button => {
     setTimeout(() => {
       AnimationOurTeam();
     }, 1000);
-    const relatedNavItem = document.querySelector(`.nav-link[data-for="${targetSection}"]`);
+    const relatedNavItem = document.querySelector(
+      `.nav-link[data-for="${targetSection}"]`
+    );
     if (relatedNavItem) {
-      relatedNavItem.classList.add('active');
+      relatedNavItem.classList.add("active");
     }
   });
 });
 
-document.querySelectorAll('.blog').forEach(button => {
-  button.addEventListener('click', function () {
-    const mains = document.querySelectorAll('main');
-    const navItems = document.querySelectorAll('.nav-item');
-    const navLink = document.querySelectorAll('.nav-link');
+document.querySelectorAll(".blog").forEach((button) => {
+  button.addEventListener("click", function () {
+    const mains = document.querySelectorAll("main");
+    const navItems = document.querySelectorAll(".nav-item");
+    const navLink = document.querySelectorAll(".nav-link");
     mains.forEach((m) => {
       m.style.opacity = 0;
       setTimeout(function () {
@@ -2317,16 +2343,16 @@ document.querySelectorAll('.blog').forEach(button => {
       }, 700);
     });
     navItems.forEach((nav) => {
-      nav.classList.remove('active');
+      nav.classList.remove("active");
     });
     navLink.forEach((nav) => {
-      nav.classList.remove('active');
+      nav.classList.remove("active");
     });
     dropdownItem.forEach((item) => {
       item.classList.remove("active");
-      dropdownItem[2].classList.add('active');
+      dropdownItem[2].classList.add("active");
     });
-    const targetSectionId = this.getAttribute('data-for');
+    const targetSectionId = this.getAttribute("data-for");
     const targetSection = document.getElementById(targetSectionId);
     setTimeout(() => {
       mains[5].style.display = "block";
@@ -2337,17 +2363,19 @@ document.querySelectorAll('.blog').forEach(button => {
     setTimeout(() => {
       AnimationBlog();
     }, 1000);
-    const relatedNavItem = document.querySelector(`.nav-link[data-for="${targetSection}"]`);
+    const relatedNavItem = document.querySelector(
+      `.nav-link[data-for="${targetSection}"]`
+    );
     if (relatedNavItem) {
-      relatedNavItem.classList.add('active');
+      relatedNavItem.classList.add("active");
     }
   });
 });
-document.querySelectorAll('.ourGallery').forEach(button => {
-  button.addEventListener('click', function () {
-    const mains = document.querySelectorAll('main');
-    const navItems = document.querySelectorAll('.nav-item');
-    const navLink = document.querySelectorAll('.nav-link');
+document.querySelectorAll(".ourGallery").forEach((button) => {
+  button.addEventListener("click", function () {
+    const mains = document.querySelectorAll("main");
+    const navItems = document.querySelectorAll(".nav-item");
+    const navLink = document.querySelectorAll(".nav-link");
     mains.forEach((m) => {
       m.style.opacity = 0;
       setTimeout(function () {
@@ -2355,19 +2383,19 @@ document.querySelectorAll('.ourGallery').forEach(button => {
       }, 700);
     });
     navItems.forEach((nav) => {
-      nav.classList.remove('active');
+      nav.classList.remove("active");
     });
     navLink.forEach((nav) => {
-      nav.classList.remove('active');
+      nav.classList.remove("active");
     });
-    const targetSectionId = this.getAttribute('data-for');
+    const targetSectionId = this.getAttribute("data-for");
     const targetSection = document.getElementById(targetSectionId);
     setTimeout(() => {
       mains[2].style.display = "block";
     }, 800);
     setTimeout(() => {
       mains[2].style.opacity = "1";
-      navItems[2].classList.add('active');
+      navItems[2].classList.add("active");
       Array.from(myImage)
         .slice(0, 5)
         .forEach((e) => {
@@ -2396,18 +2424,20 @@ document.querySelectorAll('.ourGallery').forEach(button => {
         item.classList.add("activate");
       };
     });
-    const relatedNavItem = document.querySelector(`.nav-link[data-for="${targetSection}"]`);
+    const relatedNavItem = document.querySelector(
+      `.nav-link[data-for="${targetSection}"]`
+    );
     if (relatedNavItem) {
-      relatedNavItem.classList.add('active');
+      relatedNavItem.classList.add("active");
     }
   });
 });
 
-document.querySelectorAll('.all_footer_links').forEach(button => {
-  button.addEventListener('click', function () {
-    const mains = document.querySelectorAll('main');
-    const navItems = document.querySelectorAll('.nav-item');
-    const navLink = document.querySelectorAll('.nav-link');
+document.querySelectorAll(".all_footer_links").forEach((button) => {
+  button.addEventListener("click", function () {
+    const mains = document.querySelectorAll("main");
+    const navItems = document.querySelectorAll(".nav-item");
+    const navLink = document.querySelectorAll(".nav-link");
     mains.forEach((m) => {
       m.style.opacity = 0;
       setTimeout(function () {
@@ -2415,20 +2445,20 @@ document.querySelectorAll('.all_footer_links').forEach(button => {
       }, 700);
     });
     navItems.forEach((nav) => {
-      nav.classList.remove('active');
+      nav.classList.remove("active");
     });
     navLink.forEach((nav) => {
-      nav.classList.remove('active');
+      nav.classList.remove("active");
     });
-    const targetSectionId = this.getAttribute('data-for');
+    const targetSectionId = this.getAttribute("data-for");
     const targetSection = document.getElementById(targetSectionId);
     setTimeout(() => {
       mains[0].style.display = "block";
     }, 800);
     setTimeout(() => {
       mains[0].style.opacity = "1";
-      navLink[0].classList.add('actiive');
-      navItems[0].classList.add('actiive');
+      navLink[0].classList.add("actiive");
+      navItems[0].classList.add("actiive");
       setTimeout(() => {
         AnimationHome();
       }, 100);
@@ -2441,16 +2471,18 @@ document.querySelectorAll('.all_footer_links').forEach(button => {
 
       setTimeout(function adding() {
         document.querySelectorAll(".ourCommitteesDescription")[0] === null ||
-          document.querySelectorAll(".ourCommitteesDescription")[0] === void 0
+        document.querySelectorAll(".ourCommitteesDescription")[0] === void 0
           ? void 0
           : document
-            .querySelectorAll(".ourCommitteesDescription")[0]
-            .classList.add("show1");
+              .querySelectorAll(".ourCommitteesDescription")[0]
+              .classList.add("show1");
       }, 2000);
     }, 900);
-    const relatedNavItem = document.querySelector(`.nav-link[data-for="${targetSection}"]`);
+    const relatedNavItem = document.querySelector(
+      `.nav-link[data-for="${targetSection}"]`
+    );
     if (relatedNavItem) {
-      relatedNavItem.classList.add('active');
+      relatedNavItem.classList.add("active");
     }
   });
 });
@@ -2496,13 +2528,13 @@ document.querySelectorAll('.all_footer_links').forEach(button => {
 //   });
 // });
 
-document.querySelectorAll('.btn-sections').forEach(button => {
-  button.addEventListener('click', function (e) {
+document.querySelectorAll(".btn-sections").forEach((button) => {
+  button.addEventListener("click", function (e) {
     e.preventDefault();
 
-    const mains = document.querySelectorAll('main');
-    const navItems = document.querySelectorAll('.nav-item');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const mains = document.querySelectorAll("main");
+    const navItems = document.querySelectorAll(".nav-item");
+    const navLinks = document.querySelectorAll(".nav-link");
 
     mains.forEach((m) => {
       m.style.opacity = 0;
@@ -2510,9 +2542,9 @@ document.querySelectorAll('.btn-sections').forEach(button => {
         m.style.display = "none";
       }, 700);
     });
-    navItems.forEach(nav => nav.classList.remove('active'));
-    navLinks.forEach(link => link.classList.remove('active'));
-    const targetSectionId = this.getAttribute('data-for');
+    navItems.forEach((nav) => nav.classList.remove("active"));
+    navLinks.forEach((link) => link.classList.remove("active"));
+    const targetSectionId = this.getAttribute("data-for");
     const targetSection = document.getElementById(targetSectionId);
 
     // Check if the target section exists
@@ -2530,9 +2562,11 @@ document.querySelectorAll('.btn-sections').forEach(button => {
     }
 
     // Activate the related nav item
-    const relatedNavItem = document.querySelector(`.nav-link[data-for="${targetSection}"]`);
+    const relatedNavItem = document.querySelector(
+      `.nav-link[data-for="${targetSection}"]`
+    );
     if (relatedNavItem) {
-      relatedNavItem.classList.add('active');
+      relatedNavItem.classList.add("active");
     }
   });
 });

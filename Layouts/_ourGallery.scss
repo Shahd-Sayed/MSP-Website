@@ -519,7 +519,15 @@
                             }
 
                             .image {
+                                // height: 323.84px;
                                 height: 323.84px;
+                                display: flex;
+                                align-items: center;
+
+                                img {
+                                    width: auto;
+                                    height: 100%;
+                                }
                             }
                         }
 
